@@ -1,4 +1,4 @@
-package com.boshy.monyapp.TestFX2;
+package com.boshy.monyapp;
 
 public class Mony {
     private final String Name;
