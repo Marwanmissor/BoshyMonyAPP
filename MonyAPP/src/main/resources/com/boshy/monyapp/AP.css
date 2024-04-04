@@ -1,4 +1,4 @@
 .my-anchorpane-background {
-  -fx-background-image: url("E:\MyProjects\BoshyMonyAPP\MonyAPP\src\main\ffflux.svg");
+*-fx-background-image:"ffflux.svg";;  /* Add semicolon here */
   /* Other background properties like size and position (optional) */
 }

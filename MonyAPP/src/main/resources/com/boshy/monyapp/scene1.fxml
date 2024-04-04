@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="393.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boshy.monyapp.scene1Controller">
+<AnchorPane fx:id="MAP" prefHeight="393.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boshy.monyapp.scene1Controller">
    <children>
       <Label alignment="CENTER" layoutX="2.0" layoutY="5.0" prefHeight="36.0" prefWidth="660.0" text="معامل البوشي للتحاليل الطبيه" textAlignment="CENTER" underline="true">
          <font>
@@ -99,7 +99,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="vodfoneHHelwanRB" layoutX="37.0" layoutY="205.0" mnemonicParsing="false" onAction="#enableVodaTextFeild" stylesheets="@../../../../java/com/boshy/monyapp/AP.css" text="فودافون كاش">
+      <RadioButton fx:id="vodfoneHHelwanRB" layoutX="37.0" layoutY="205.0" mnemonicParsing="false" onAction="#enableVodaTextFeild" text="فودافون كاش">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

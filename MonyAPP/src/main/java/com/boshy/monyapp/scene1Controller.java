@@ -42,8 +42,7 @@ public class scene1Controller {
         setVisa();
         setVoda();
         scene2Controller sc2 = new scene2Controller();
-        sc2.saveFile(Helwan1MD.toString() , Helwan2MD.toString(), HHelwanMD.toString()  );
-//        System.out.println(Helwan1MD.toString() + Helwan1MD.toString() + HHelwanMD.toString());
+        sc2.saveFile(Helwan1MD.toString() , Helwan2MD.toString(), HHelwanMD.toString());
         String s = Helwan1MD.toString() + Helwan2MD.toString() + HHelwanMD.toString();
         sc2.detail.setText(s);
     }

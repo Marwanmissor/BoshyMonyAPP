@@ -17,10 +17,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 public class scene2Controller {
-    @FXML
-    private Button save;
-    @FXML
-    private Button back;
+@FXML
     private Scene scene;
     private Stage stage;
     Parent root;
