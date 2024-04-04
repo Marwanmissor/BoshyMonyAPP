@@ -1,3 +1,7 @@
 .anchor {
     -fx-background-image:url('file:/E:/MyProjects/BoshyMonyAPP/MonyAPP/src/main/resources/com/boshy/monyapp/ffflux.png');
 }
+
+.button-64 {
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
