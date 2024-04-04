@@ -1,14 +1,13 @@
 package com.boshy.monyapp;
 
-public class Mony {
+public class MonyDetail {
     private final String Name;
     private float Oriinal; // الايراد الكلي
     private float Vodafone; // فودافون كاش
     private float Visa; // الفيزا
-    private float Total;
+    private float Total;//ما بعد الطرح
 
-
-    Mony(String name) {
+    MonyDetail(String name) {
         this.Name = name;
     }
     public float getOriinal() {
