@@ -33,7 +33,11 @@ public class scene1Controller {
     MonyDetail HHelwanMD = new MonyDetail("حدايق حلوان ");
 
     public void done(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("scene2.fxml"));
+        scene2Controller sc2 = new scene2Controller();  // Create the controller instance
+        loader.setController(sc2);  // Set the controller instance to the loader
+
+        root = loader.load();  // Load the FXML with the set controller
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -41,10 +45,9 @@ public class scene1Controller {
         setTotal();
         setVisa();
         setVoda();
-        scene2Controller sc2 = new scene2Controller();
-        sc2.saveFile(Helwan1MD.toString() , Helwan2MD.toString(), HHelwanMD.toString());
         String s = Helwan1MD.toString() + Helwan2MD.toString() + HHelwanMD.toString();
-        sc2.detail.setText(s);
+        sc2.saveFile(s);
+        sc2.setLable(s);
     }
 
     public void enableVisaTextField() {

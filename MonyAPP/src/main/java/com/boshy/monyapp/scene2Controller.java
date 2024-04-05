@@ -3,10 +3,10 @@ package com.boshy.monyapp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -22,8 +22,15 @@ public class scene2Controller {
     private Stage stage;
     Parent root;
     @FXML
-    public Label detail = new Label();
-
+    private Label detail = new Label();
+//    @FXML
+//    private TextArea detail2 = new TextArea();
+//scene2Controller(String m){
+//    this.detail.setText(m);
+//}
+//scene2Controller(){
+//
+//}
     public void back(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("scene1.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -32,16 +39,20 @@ public class scene2Controller {
         stage.show();
     }
 
-    public void saveFile(String TS1,String TS2 ,String TS3)throws FileNotFoundException, IOException{
+    public void saveFile(String TS1)throws FileNotFoundException, IOException{
         LocalDate d = LocalDate.now();
         File f = new File("ايراد يوم " + d.minusDays(1) +".txt");
         f.createNewFile();
         FileWriter fw = new FileWriter(f);
         fw.write(TS1);
-        fw.write(TS2);
-        fw.write(TS3);
+//        fw.write(TS2);
+//        fw.write(TS3);
         fw.flush();
         fw.close();
+    }
+    public void setLable(String ms){
+        this.detail.setText(ms);
+//        this.detail2.setText(ms);
     }
 
 }
