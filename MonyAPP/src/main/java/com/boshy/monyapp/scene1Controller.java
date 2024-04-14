@@ -42,12 +42,14 @@ public class scene1Controller {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        setTotal();
-        setVisa();
-        setVoda();
+        see();
+        //setTotal();
+        //setVisa();
+        //setVoda();
         String s = Helwan1MD.toString() + Helwan2MD.toString() + HHelwanMD.toString();
         sc2.saveFile(s);
         sc2.setLable(s);
+
     }
 
     public void enableVisaTextField() {
@@ -89,60 +91,81 @@ public class scene1Controller {
             vodafoneHHelwanTF.setDisable(true);
         }
     }
-    private void setTotal(){
-        try{
-        Helwan1MD.setOriinal(Float.parseFloat(totalHelwan1.getText()));
-    }catch (Exception e){
-            Helwan1MD.setOriinal(0);
+//    private void setTotal(){
+//        try{
+//        Helwan1MD.setOriinal(Float.parseFloat(totalHelwan1.getText()));
+//    }catch (Exception e){
+//            Helwan1MD.setOriinal(0);
+//        }
+//        try {
+//            Helwan2MD.setOriinal(Float.parseFloat(totalHelwan2.getText()));
+//        }catch (Exception e){
+//            Helwan2MD.setOriinal(0);
+//        }
+//        try {
+//            HHelwanMD.setOriinal(Float.parseFloat(totalHHelwan.getText()));
+//        }catch (Exception e){
+//            HHelwanMD.setOriinal(0);
+//        }
+//    }
+//    //////////////////////////////////////////////////
+//    private void setVisa(){
+//        try{
+//            Helwan1MD.setVisa(Float.parseFloat(visaHelwan1TF.getText()));
+//        }catch (Exception e){
+//            Helwan1MD.setVisa(0);
+//        }
+//        try{
+//            Helwan2MD.setVisa(Float.parseFloat(visaHelwan2TF.getText()));
+//        }catch (Exception e){
+//            Helwan2MD.setVisa(0);
+//        }
+//
+//        try{
+//            HHelwanMD.setVisa(Float.parseFloat(visaHHelwanTF.getText()));
+//        }catch (Exception e){
+//            HHelwanMD.setVisa(0);
+//        }
+//    }
+/////////////////////////////////////////////
+//    private void setVoda(){
+//        try{
+//            Helwan1MD.setVodafone(Float.parseFloat(vodafoneHelwan1TF.getText()));
+//        }catch (Exception e){
+//            Helwan1MD.setVodafone(0);
+//        }
+//
+//        try{
+//            Helwan2MD.setVodafone(Float.parseFloat(vodafoneHelwan2TF.getText()));
+//        }catch (Exception e){
+//            Helwan2MD.setVodafone(0);
+//        }
+//
+//        try{
+//            HHelwanMD.setVodafone(Float.parseFloat(vodafoneHHelwanTF.getText()));
+//        }catch (Exception e){
+//            HHelwanMD.setVodafone(0);
+//        }
+//    }
+    private float setter(String m){
+        if (m.isEmpty() || m == null){
+            return 0;
         }
-        try {
-            Helwan2MD.setOriinal(Float.parseFloat(totalHelwan2.getText()));
-        }catch (Exception e){
-            Helwan2MD.setOriinal(0);
-        }
-        try {
-            HHelwanMD.setOriinal(Float.parseFloat(totalHHelwan.getText()));
-        }catch (Exception e){
-            HHelwanMD.setOriinal(0);
-        }
+        return Float.parseFloat(m);
     }
-    //////////////////////////////////////////////////
-    private void setVisa(){
-        try{
-            Helwan1MD.setVisa(Float.parseFloat(visaHelwan1TF.getText()));
-        }catch (Exception e){
-            Helwan1MD.setVisa(0);
-        }
-        try{
-            Helwan2MD.setVisa(Float.parseFloat(visaHelwan2TF.getText()));
-        }catch (Exception e){
-            Helwan2MD.setVisa(0);
-        }
+    private void see(){
+        Helwan1MD.setOriinal(setter(totalHelwan1.getText()));
+        Helwan1MD.setVisa(setter(visaHelwan1TF.getText()));
+        Helwan1MD.setVodafone(setter(vodafoneHelwan1TF.getText()));
+        ///////////////////////////////////////////
+        Helwan2MD.setOriinal(setter(totalHelwan2.getText()));
+        Helwan2MD.setVisa(setter(visaHelwan2TF.getText()));
+        Helwan2MD.setVodafone(setter(vodafoneHelwan2TF.getText()));
+        ///////////////////////////////////////////////////////
+        HHelwanMD.setOriinal(setter(totalHHelwan.getText()));
+        HHelwanMD.setVisa(setter(visaHHelwanTF.getText()));
+        HHelwanMD.setVodafone(setter(vodafoneHHelwanTF.getText()));
 
-        try{
-            HHelwanMD.setVisa(Float.parseFloat(visaHHelwanTF.getText()));
-        }catch (Exception e){
-            HHelwanMD.setVisa(0);
-        }
     }
-    /////////////////////////////////////////////
-    private void setVoda(){
-        try{
-            Helwan1MD.setVodafone(Float.parseFloat(vodafoneHelwan1TF.getText()));
-        }catch (Exception e){
-            Helwan1MD.setVodafone(0);
-        }
 
-        try{
-            Helwan2MD.setVodafone(Float.parseFloat(vodafoneHelwan2TF.getText()));
-        }catch (Exception e){
-            Helwan2MD.setVodafone(0);
-        }
-
-        try{
-            HHelwanMD.setVodafone(Float.parseFloat(vodafoneHHelwanTF.getText()));
-        }catch (Exception e){
-            HHelwanMD.setVodafone(0);
-        }
-    }
 }

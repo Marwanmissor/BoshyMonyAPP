@@ -23,14 +23,7 @@ public class scene2Controller {
     Parent root;
     @FXML
     private Label detail = new Label();
-//    @FXML
-//    private TextArea detail2 = new TextArea();
-//scene2Controller(String m){
-//    this.detail.setText(m);
-//}
-//scene2Controller(){
-//
-//}
+
     public void back(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("scene1.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -45,14 +38,11 @@ public class scene2Controller {
         f.createNewFile();
         FileWriter fw = new FileWriter(f);
         fw.write(TS1);
-//        fw.write(TS2);
-//        fw.write(TS3);
         fw.flush();
         fw.close();
     }
     public void setLable(String ms){
         this.detail.setText(ms);
-//        this.detail2.setText(ms);
     }
 
 }
